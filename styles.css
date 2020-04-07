@@ -1,0 +1,20 @@
+#header {
+
+}
+
+#header, #footer {
+    background-color: black;
+}
+
+#header .logo {
+    width: 200px;
+}
+
+.title {
+    color: red;
+    font-size: 20px;
+}
+
+#header.title {
+    color: blue;
+}

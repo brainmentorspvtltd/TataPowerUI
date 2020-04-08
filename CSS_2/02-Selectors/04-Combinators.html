@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu > li > a {
+            color: red;
+        }
+        #parent > h2 {
+            color: blue;
+        }
+        /* #parent + h2 {
+            color: seagreen;
+        } */
+        #parent ~ h2 {
+            color: seagreen;
+        }
+
+        #main-nav .menu {
+            display: none;
+        }
+
+        #main-nav button:hover ~ .menu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Combinators</h1>
+
+    <div id="parent">
+        <h2>This heading is child of parent div</h2>
+        <h2>This heading is child of parent div</h2>
+        <div class="child">
+            <h2>This heading is child of parent's child</h2>
+        </div>
+        <h2>This heading is child of parent div</h2>
+    </div>
+    <hr>
+    <h2>This heading is outside parent div element</h2>
+    <h2>This heading is outside parent div element</h2>
+
+<div id="main-nav">
+    <button>Open Menu</button>
+    <span></span>
+    <ul class="menu">
+        <li>
+            <a href="#">Menu Item_1</a>
+        </li>
+        <li>
+            <a href="#">Menu Item_2</a>
+        </li>
+        <li>
+            <a href="#">Menu Item_3</a>
+            <ul>
+                <li>
+                    <a href="#">Nested Item_1</a>
+                </li>
+                <li>
+                    <a href="#">Nested Item_1</a>
+                </li>
+                <li>
+                    <a href="#">Nested Item_1</a>
+                </li>
+                <li>
+                    <a href="#">Nested Item_1</a>
+                </li>
+                <li>
+                    <a href="#">Nested Item_1</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Menu Item_4</a>
+        </li>
+        <li>
+            <a href="#">Menu Item_5</a>
+        </li>
+    </ul>
+</div>
+
+    <h2>This heading is outside parent div element</h2>
+
+</body>
+</html>

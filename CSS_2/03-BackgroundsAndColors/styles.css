@@ -1,0 +1,15 @@
+body {
+    /* by default body takes 8px pf margin */
+    margin: 0px;
+    background-image: url("https://image.cnbcfm.com/api/v1/image/103135046-GettyImages-110022758.jpg?v=1446585058");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+div {
+    height: 600px;
+}
+
+/* - assign a background image to each div with size 100% 100% */
+/* - apply background-attachement to all the div and check the output */
+/* check whether you get a parallax effect or not */

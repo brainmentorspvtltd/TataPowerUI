@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            /* to remove bullets */
+            list-style: none;
+            /* set margin and padding as zero, because ul takes few margin and padding by default */
+            margin: 0px;
+            padding: 0px;
+        }
+        ul li {
+            /* use inline-block to convert block elements into inline */
+            /* so that you will have appearance like inline elements with a height and width */
+            display: inline-block;
+            background-color: lightblue;
+            width: 10%;
+            text-align: center;
+            padding: 10px;
+        }
+        ul li a {
+            /* to remove the underline from a tag */
+            text-decoration: none;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Navbars</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">Books</a></li>
+        <li><a href="#">Kids</a></li>
+        <li><a href="#">More</a></li>
+    </ul>
+    
+</body>
+</html>

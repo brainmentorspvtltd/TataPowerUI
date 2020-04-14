@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#header {
+    background-color: lightsteelblue;
+}
+
+#header .logo {
+    width: 20%;
+}
+#header .logo img {
+    width: 100%;
+}
+
+#header .search {
+    width: 70%;
+    padding-top: 30px;
+}
+
+#header .search input[type='text'] {
+    width: 70%;
+    height: 40px;
+}
+#header .search input[type='submit'] {
+    width: 20%;
+    height: 40px;
+}

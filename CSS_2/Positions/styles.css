@@ -28,7 +28,7 @@ ul {
     width: 100%;
     top: 0px;
     left: 0px;
-    /* z-index: -1; */
+    z-index: 10;
 }
 
 #content {
@@ -46,9 +46,18 @@ ul {
     padding: 10px 0px;
     font-size: 20px;
     border-bottom: 1px solid lightgray;
+    position: relative;
 }
 #sidebar_1 ul li a {
     text-decoration: none;
+}
+
+#sidebar_1 ul li:after {
+    content: "";
+    border: 8px solid red;
+    border-color: red transparent transparent;
+    position: absolute;
+    bottom: 10px;
 }
 
 #sidebar_1 ul li:last-child {
@@ -64,6 +73,29 @@ ul {
 #main .article img {
     width: 100%;
 }
+
+#main .image {
+    position: relative;
+}
+
+#main .image .caption {
+    position: absolute;
+    /* top: 0px; */
+    bottom: 20%;
+    left: 0%;
+    text-align: center;
+    background-color: #000;
+    width: 100%;
+    padding: 20px 0px;
+}
+#main .image h2{
+    margin: 0px;
+}
+#main .image a {
+    color: #fff;
+    text-decoration: none;
+}
+
 
 #sidebar_2 {
     width: 25%;

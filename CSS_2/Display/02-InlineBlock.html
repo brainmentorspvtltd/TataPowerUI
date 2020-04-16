@@ -9,7 +9,7 @@
             /* to remove bullets */
             list-style: none;
             /* set margin and padding as zero, because ul takes few margin and padding by default */
-            margin: 0px;
+            margin: 0px 0px 100px;
             padding: 0px;
         }
         ul li {
@@ -20,12 +20,44 @@
             width: 10%;
             text-align: center;
             padding: 10px;
+            vertical-align: top;
+            position: relative;
         }
         ul li a {
             /* to remove the underline from a tag */
             text-decoration: none;
             color: darkblue;
         }
+
+        .dropdown {
+            position: absolute;
+            width: 100%;
+            left: 0%;
+            top: 38px;
+            display: none;
+        }
+        .dropdown ul li {
+            width: 100%;
+            display: block;
+            padding: 10px 0px;
+            background-color: lightgray;
+            border-bottom: 1px solid red;
+        }
+
+        .col {
+            display: inline-block;
+            width: 30%;
+            border: 2px solid red;
+            margin: 0px 10px;
+            padding: 5px;
+            /* vertical-align: middle; */
+            vertical-align: top;
+        }
+
+        ul li:hover .dropdown {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -34,14 +66,71 @@
 
     <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Men</a></li>
+        <li>
+            <a href="#">Men</a>
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Hockey</a></li>
+                    <li><a href="#">Table Tennis</a></li>
+                    <li><a href="#">Chess</a></li>
+                </ul>
+            </div>
+        </li>
         <li><a href="#">Women</a></li>
-        <li><a href="#">Sports</a></li>
+        <li>
+            <a href="#">Sports</a>
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Hockey</a></li>
+                    <li><a href="#">Table Tennis</a></li>
+                    <li><a href="#">Chess</a></li>
+                </ul>
+            </div>
+        </li>
         <li><a href="#">Watch</a></li>
-        <li><a href="#">Books</a></li>
+        <li>
+            <a href="#">Books</a>
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">Cricket</a></li>
+                    <li><a href="#">Football</a></li>
+                    <li><a href="#">Hockey</a></li>
+                    <li><a href="#">Table Tennis</a></li>
+                    <li><a href="#">Chess</a></li>
+                </ul>
+            </div>
+        </li>
         <li><a href="#">Kids</a></li>
         <li><a href="#">More</a></li>
     </ul>
+
+    <div id="content">
+        <div class="col col-1">
+            <h2>This is column_1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorem odio impedit similique. Esse, minima officia corporis debitis cumque quaerat delectus est doloremque eligendi iste nulla itaque eaque tempore quidem!
+            </p>
+        </div>
+        <div class="col col-2">
+            <h2>This is column_2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorem odio impedit similique. Esse, minima officia corporis debitis cumque quaerat delectus est doloremque eligendi iste nulla itaque eaque tempore quidem!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem amet omnis nam placeat alias, aliquid excepturi adipisci rem dolorem! Natus quia id iusto adipisci blanditiis culpa earum sint asperiores ad.
+            </p>
+        </div>
+        <div class="col col-3">
+            <h2>This is column_3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorem odio impedit similique. Esse, minima officia corporis debitis cumque quaerat delectus est doloremque eligendi iste nulla itaque eaque tempore quidem!
+            </p>
+        </div>
+    </div>
     
 </body>
 </html>

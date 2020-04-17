@@ -1,0 +1,50 @@
+/* Step : 1 */
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/* Step 2 */
+#main-navigation > ul > li {
+    display: inline-block;
+    vertical-align: top;
+    width: 10%;
+    text-align: center;
+    position: relative;
+}
+
+#main-navigation ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+#main-navigation ul li a:hover{
+    background-color: red;
+    color: #fff;
+}
+
+/* Step 3 */
+#main-navigation .dropdown {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    display: none;
+}
+
+#main-navigation ul li:hover .dropdown {
+    display: block;
+}
+
+#main-navigation .dropdown .nested-dropdown {
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: 1%;
+    display: none;
+}
+#main-navigation .dropdown ul li:hover .nested-dropdown {
+    display: block;
+}

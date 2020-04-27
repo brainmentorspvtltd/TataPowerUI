@@ -1,0 +1,121 @@
+/* Global Settings */
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0px;
+}
+
+p {
+    margin-top: 0px;
+}
+
+/* Helper Classes */
+/* Float properties */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* Width 100% for images */
+.w-100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Generic CSS */
+#header {
+
+}
+#header .container {
+    padding: 0px 15px;
+}
+#header_top {
+    background-color: #333545;
+    padding: 10px 0px 5px;
+}
+
+#header_top .logo {
+    width: 10%;
+}
+
+#header_top .search {
+    width: 45%;
+    margin-left: 20px;
+    position: relative;
+}
+#header_top .search input[type="text"] {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+#header_top .search button {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+
+#header_top .user_links {
+    width: 28%;
+    text-align: right;
+}
+
+#header_top .user_links ul li {
+    display: inline-block;
+    margin: 10px 20px 0px;
+}
+#header_top .user_links ul li a,
+#header_top .user_links ul li i {
+    color: #fff;
+}
+
+#header_bottom {
+    background-color: #1f2533;
+    padding: 8px 0px;
+}
+#header_bottom ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+#header_bottom ul li a {
+    color: #fff;
+}
+
+#main-navigation {
+
+}
+
+#main {
+
+}
+
+#footer {
+
+}
+
+/* Page Specific CSS */

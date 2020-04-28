@@ -110,8 +110,37 @@ p {
 
 }
 
-#main {
+#banner {
+    margin-bottom: 5px;
+}
 
+#content {
+    background-color: #f2f2f2;
+    padding-top: 50px;
+}
+
+#content .container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#main {
+    width: 73%;
+}
+#sidebar {
+    width: 23%;
+}
+#sidebar ul li {
+    background-color: #fff;
+    margin-bottom:2px;
+    padding: 8px;
+}
+#sidebar ul li a {
+    color: #000;
+    display: block;
+}
+#sidebar ul li p {
+    margin-bottom: 6px;
 }
 
 #footer {
@@ -119,3 +148,8 @@ p {
 }
 
 /* Page Specific CSS */
+#main .section .col {
+    display: inline-block;
+    width: 30%;
+    margin-right: 15px;
+}

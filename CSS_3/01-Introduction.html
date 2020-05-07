@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* Chrome + Safari */
+            -webkit-box-sizing: border-box;
+            /* Mozilla Firefox */
+            -moz-box-sizing: border-box;
+            /* Opera */
+            -o-box-sizing: border-box;
+            /* Microsoft IE */
+            -ms-box-sizing: border-box;
+        }
+        .col {
+            display: inline-block;
+            width: 33%;
+            background-color: lightgray;
+            border: 1px solid green;
+            padding: 10px;
+        }
+        input {
+            height: 40px;
+            width: 100%;
+            margin-bottom: 20px;
+            color: red;
+        }
+        ::-webkit-input-placeholder,
+        ::-moz-placeholder {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS 3 Introduction</h1>
+
+    <input type="text" placeholder="Search Items Here">
+
+    <div id="parent">
+        <div class="col">
+            <h2>This is column_1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus quas, ex veritatis, atque corporis minima molestias laudantium dolor esse aut quasi consequatur nostrum reprehenderit at, placeat consequuntur architecto autem.
+            </p>
+        </div>
+        <div class="col">
+            <h2>This is column_2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus quas, ex veritatis, atque corporis minima molestias laudantium dolor esse aut quasi consequatur nostrum reprehenderit at, placeat consequuntur architecto autem.
+            </p>
+        </div>
+        <div class="col">
+            <h2>This is column_3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus quas, ex veritatis, atque corporis minima molestias laudantium dolor esse aut quasi consequatur nostrum reprehenderit at, placeat consequuntur architecto autem.
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #login {
+            display: none;
+        }
+        #login:target {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Target Selector</h1>
+
+    <a href="#login">Login Now</a>
+
+    <hr>
+
+    <div id="login">
+        <a href="#">Close</a>
+        <form action="#">
+            <input type="text" placeholder="Enter Email">
+            <input type="password" placeholder="Enter Password">
+            <input type="submit">
+        </form>
+    </div>
+
+</body>
+</html>

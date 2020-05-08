@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            text-align: center;
+        }
+        ul li {
+            display: inline-block;
+            margin: 0px 20px;
+        }
+        section {
+            border: 1px solid red;
+            height: 500px;
+            padding: 100px;
+        }
+        /* #gallery:target {
+            background-color: lightgray;
+        } */
+        /* #content > section:target {
+            background-color: lightgray;
+        } */
+        section:target {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Single Page Example</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#footer">Footer</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <section id="home">
+            <h2>This is home section</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta non recusandae asperiores, blanditiis, deleniti nisi natus maiores reprehenderit suscipit quo quod. Mollitia tempora ipsum ratione dolorem error praesentium nisi fugit.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sit, officiis nihil ex reprehenderit quis inventore quos voluptas, dignissimos excepturi deleniti? Voluptatum accusamus sequi eveniet fugit eligendi? Consequatur, beatae libero?
+            </p>
+        </section>
+    
+        <section id="gallery">
+            <h2>This is Gallery section</h2>
+            <img src="../../images/00-22.gif" alt="">
+            <img src="../../images/00-22.gif" alt="">
+            <img src="../../images/00-22.gif" alt="">
+            <img src="../../images/00-22.gif" alt="">
+            <img src="../../images/00-22.gif" alt="">
+        </section>
+    
+        <section id="about">
+            <h2>This is about section</h2>
+            <h3>Hello this is Brain Mentors</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sit, officiis nihil ex reprehenderit quis inventore quos voluptas, dignissimos excepturi deleniti? Voluptatum accusamus sequi eveniet fugit eligendi? Consequatur, beatae libero?
+            </p>
+        </section>
+    
+        <section id="contact">
+            <h2>This is contact section</h2>
+            <p>
+                contact us @ brainmentors@gmail.com
+            </p>
+        </section>
+    
+        <section id="footer">
+            <h2>This is footer section</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta non recusandae asperiores, blanditiis, deleniti nisi natus maiores reprehenderit suscipit quo quod. Mollitia tempora ipsum ratione dolorem error praesentium nisi fugit.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sit, officiis nihil ex reprehenderit quis inventore quos voluptas, dignissimos excepturi deleniti? Voluptatum accusamus sequi eveniet fugit eligendi? Consequatur, beatae libero?
+            </p>
+        </section>
+    </div>
+    
+</body>
+</html>

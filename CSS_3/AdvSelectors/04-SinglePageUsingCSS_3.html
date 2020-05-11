@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        li {
+            display: inline-block;
+            width: 15%;
+            text-align: center;
+            background-color: lightgrey;
+        }
+        li a {
+            text-decoration: none;
+            color: red;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+        }
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            text-align: center;
+        }
+        section {
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+        section .inner-wrapper {
+            height: 600px;
+            border: 2px solid red;
+        }
+        #mobile, #laptop, #shoes, #watch {
+            display: none;
+        }
+        
+        #mobile:target,
+        #laptop:target,
+        #shoes:target,
+        #watch:target {
+            display: block;
+        }
+        
+        #mobile:target ~ #home,
+        #laptop:target ~ #home,
+        #shoes:target ~ #home,
+        #watch:target ~ #home {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mobile">Mobile</a></li>
+            <li><a href="#laptop">Laptop</a></li>
+            <li><a href="#shoes">Shoes</a></li>
+            <li><a href="#watch">Watch</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <section id="mobile">
+            <div class="inner-wrapper">
+                <h2>This is mobile section</h2>
+            </div>
+        </section>
+        <section id="laptop">
+            <div class="inner-wrapper">
+                <h2>This is laptop section</h2>
+            </div>
+        </section>
+        <section id="shoes">
+            <div class="inner-wrapper">
+                <h2>This is shoes section</h2>
+            </div>
+        </section>
+        <section id="watch">
+            <div class="inner-wrapper">
+                <h2>This is watch section</h2>
+            </div>
+        </section>
+        <section id="home">
+            <div class="inner-wrapper">
+                <h2>This is home page</h2>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

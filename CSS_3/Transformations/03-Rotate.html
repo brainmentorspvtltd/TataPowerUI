@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            text-shadow: 2px 2px 1px red;
+        }
+        div {
+            height: 400px;
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid red;
+            /* overflow: hidden; */
+            transition-duration: 2s;
+        }
+        img {
+            width: 100%;
+            height: inherit;
+            transition-duration: 2s;
+        }
+        div:hover img {
+            /* transform: rotateX(180deg); */
+            /* transform: rotateY(360deg); */
+            transform: rotateZ(360deg) scale(2,2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transform Rotate</h1>
+
+    <div>
+        <img src="../../images/WebImages/dhoni_img.jpg" alt="">
+    </div>
+    
+</body>
+</html>

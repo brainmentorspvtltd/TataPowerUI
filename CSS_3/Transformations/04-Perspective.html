@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            text-shadow: 2px 2px 1px red;
+        }
+        div {
+            height: 400px;
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid red;
+            /* overflow: hidden; */
+            transition-duration: 2s;
+            perspective: 500px;
+        }
+        img {
+            width: 100%;
+            height: inherit;
+            transition-duration: 20s;
+            transform-origin: left;
+        }
+        div:hover img {
+            transform: rotateY(-180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Perspective</h1>
+
+    <div>
+        <img src="../../images/WebImages/dhoni_img.jpg" alt="">
+    </div>
+    
+</body>
+</html>

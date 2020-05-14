@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        img {
+            width: 100%;
+        }
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;  
+            background-color: #fff;
+            animation: loader 2s;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+        }
+        .spinner {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            border: 30px solid red;
+            border-color: red transparent;
+            border-radius: 50%;
+            top: 20%;
+            left: 40%;
+            animation: spin 1s infinite linear;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes loader {
+            0% {
+                opacity: 1;
+            }
+            99% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader">
+        <span class="spinner"></span>
+    </div>
+
+    <div id="container">
+        <header>
+            <h1>This is header</h1>
+        </header>
+    
+        <div id="banner">
+            <img src="../../images/images/l34882-ironman-rigged-original-model--98611.jpg" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>

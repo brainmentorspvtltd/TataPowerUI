@@ -8,6 +8,11 @@ body {
     /* justify-content: space-around; */
     /* justify-content: space-between; */
     justify-content: space-evenly;
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+    /* align-content: center; */
 }
 .col {
     border: 2px solid red;
@@ -27,4 +32,26 @@ img {
 }
 .col-3 {
     width: 20%;
+}
+
+ul {
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 1600px;
+    border: 1px solid green;
+    padding: 20px;
+    align-content: center;
+}
+li {
+    height: 200px;
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: red;
+    border: 1px solid;
 }

@@ -248,8 +248,26 @@ p {
     letter-spacing: 1px;
 }
 
-#main {
-
+#banner {
+    position: relative;
+}
+#banner .desc {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner .desc h2 {
+    color: #fff;
+}
+#banner .desc h2 span {
+    color: #47CF73;
 }
 
 #footer {
@@ -257,3 +275,115 @@ p {
 }
 
 /* Page Specific CSS */
+#our_services {
+    padding-top: 70px;
+}
+#our_services h2 {
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 50px;
+    padding: 10px 0px;
+    font-size: 50px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+#our_services h2 span {
+    font-weight: 500;
+}
+
+#our_services h2:after, 
+#our_services h2:before {
+    content: "";
+    position: absolute;
+    left: 20%;
+    width: 40%;
+    border: 1px solid #000;
+}
+#our_services h2::before {
+    top: -5px;
+}
+#our_services h2:after {
+    bottom: -5px;
+}
+
+#our_services .img{
+    width: 33%;
+}
+#our_services .img img {
+    height: 90%;
+}
+#our_services .services {
+    width: 62%;
+}
+#our_services ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#our_services ul li {
+    width: 45%;
+    margin-bottom: 25px;
+}
+#our_services ul li .row {
+    justify-content: space-between;
+    align-items: center;
+}
+#our_services ul li .row .sub-col:first-child {
+    width: 18%;
+}
+#our_services ul li .row .sub-col:last-child {
+    width: 70%;
+}
+#our_services ul li .row i {
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-size: 25px;
+    padding-top: 23px;
+    transition: 0.5s;
+}
+#our_services ul li h4 {
+    margin-bottom: 10px;
+    color: #ea8116;
+    letter-spacing: 2px;
+}
+#our_services ul li p {
+    color: #999;
+    line-height: 30px;
+}
+#our_services ul li:hover h4 {
+    color: #000;
+}
+#our_services ul li:hover .row i {
+    background-color: #ea8116;
+    color: #fff;
+}
+
+@media(max-width:1200px) {
+    #our_services ul li  {
+        width: 48%;
+    }
+}
+
+@media(max-width:992px) {
+    #our_services .container > .row {
+        flex-wrap: wrap;
+    }
+    #our_services .col {
+        width: 100%;
+    }
+}
+@media(max-width:576px) {
+    #our_services .container > .row {
+        display: block;
+    }
+    #our_services ul {
+        display: block;
+    }
+    #our_services ul li {
+        width: 70%;
+    }
+}

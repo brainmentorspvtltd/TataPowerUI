@@ -1,0 +1,30 @@
+Javascript
+- Client + Server Side Dynamic Scripting Language
+
+- Netscape -> Nexus (Static web browser)
+- Brendon Eich (Self + Scheme) (Functional + OOPS) => Mocha (Nick Name) (10 Days)
+- LiveScript => Mosaic (Dynamic web browser) => Mozilla Firefox (Now)
+- JavaScript
+-------------------------------------------------
+- Microsoft JScript
+
+ECMA - European Computer Manufacture Association
+ECMAScript (ES)
+-------------------------------------------------
+V8Engine -> browser console
+-------------------------------------------------
+Interpreted Language
+Dynamically Typed
+Loosely (Weakely) Typed
+Event Driven
+Functional
+Prototype Based
+
+
+
+
+
+
+
+
+

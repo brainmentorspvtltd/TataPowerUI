@@ -7,8 +7,9 @@ function initEvents() {
     cart = document.querySelector("#cart");
     overlay = document.querySelector('.overlay');
     overlay.addEventListener("click", hideCart);
-    document.querySelector(".cart_btn").addEventListener("click" , showCartItems);
+    document.querySelector(".cart_btn").addEventListener("click" , displayCart);
     showCartCount();
+    loadCartProducts();
 }
 
 function showCartCount() {
@@ -41,12 +42,16 @@ function loadProducts() {
     });
 }
 
-// function showCart() {
-//     cart.classList.toggle('showCart');
-//     overlay.style.display = 'block';
-// }
+function displayCart() {
+    cart.classList.toggle('showCart');
+    overlay.style.display = 'block';
+    showCartItems();
+}
 
 function addToCart() {
+    cart.classList.toggle('showCart');
+    overlay.style.display = 'block';
+
     var p_id = event.target.value;
     for(var i = 0; i < products.length; i++) {
         if(p_id == products[i].p_id) {
@@ -58,11 +63,10 @@ function addToCart() {
     obj.addItem(current_obj.p_id, current_obj.p_name, current_obj.p_price,current_obj.p_img);
     showCartItems();
     showCartCount();
+    saveCartProducts();
 }
 
 function showCartItems() {
-    cart.classList.toggle('showCart');
-    overlay.style.display = 'block';
     var table = document.querySelector("#cartList");
     table.innerHTML = "";
     obj.cartItems.forEach(function(p) {
@@ -71,12 +75,35 @@ function showCartItems() {
         tr.insertCell().innerHTML = p.p_name;
         tr.insertCell().innerHTML = p.p_price;
         tr.insertCell().innerHTML = 'Qty : 1';
-        tr.insertCell().innerHTML = "<button><i class='fas fa-trash'></button>";
+        var btn = document.createElement("button");
+        // btn.innerHTML = "<i class='fas fa-trash'>";
+        btn.innerHTML = "Delete";
+        btn.setAttribute('value',p.p_id);
+        tr.insertCell().appendChild(btn);
         table.appendChild(tr);
+        btn.addEventListener("click", deleteFromCart);
     });
 }
 
 function hideCart() {
     cart.classList.toggle('showCart');
     overlay.style.display = 'none';
+}
+
+function deleteFromCart() {
+    var p_id = event.srcElement.value;
+    obj.deleteItem(p_id);
+    showCartItems();
+    saveCartProducts();
+}
+
+function saveCartProducts() {
+    var json = JSON.stringify(obj.cartItems);
+    localStorage.setItem('products', json);
+}
+
+function loadCartProducts() {
+    var data = localStorage.getItem('products');
+    obj.cartItems = JSON.parse(data);
+    showCartCount();
 }

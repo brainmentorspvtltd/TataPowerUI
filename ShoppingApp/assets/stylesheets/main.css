@@ -134,7 +134,10 @@ ul {
     padding: 5px;
 }
 #cartList button {
-    background-color: transparent;
-    border: none;
+    background-color: red;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0px;
+    border: 1px solid red;
     cursor: pointer;
 }

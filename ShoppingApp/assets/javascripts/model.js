@@ -11,6 +11,8 @@ class Product {
         this.p_name = p_name;
         this.p_price = p_price;
         this.p_img = p_img;
+        // this.qty = 0;
+        this.delete = false;
     }
 }
 
@@ -22,8 +24,21 @@ var obj = {
         console.log(this.cartItems);
     },
 
-    "deleteItem" : function() {
-
+    "deleteItem" : function(id) {
+        // for(var i = 0; i < this.cartItems.length; i++) {
+        //     if(this.cartItems[i].p_id == id) {
+        //         var item = this.cartItems[i];
+        //         break;
+        //     }
+        // }
+        var item = this.cartItems.filter(function(p){
+            return p.p_id == id;
+        });
+        item[0].delete = true;
+        console.log(item);
+        this.cartItems = this.cartItems.filter(function(p){
+            return p.delete == false;
+        });
     },
     
     "searchItem" : function() {

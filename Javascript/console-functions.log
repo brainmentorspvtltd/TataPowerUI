@@ -1,0 +1,117 @@
+var obj = {'name' : 'Ram', 'age' : 34, 'sal' : 45000}
+undefined
+obj
+{name: "Ram", age: 34, sal: 45000}
+obj instanceof Object
+true
+obj.name
+"Ram"
+obj.address = 'Delhi'
+"Delhi"
+obj
+{name: "Ram", age: 34, sal: 45000, address: "Delhi"}
+function calc(x,y) {
+    z = x + y;
+    return z;
+}
+undefined
+calc(3,4)
+7
+function calc(fun) {
+    return fun;
+}
+undefined
+function add() {
+    x1 = 12;
+    y1 = 14;
+    z1 = x1 + y1;
+    console.log(z1);
+}
+undefined
+calc(add)
+ƒ add() {
+    x1 = 12;
+    y1 = 14;
+    z1 = x1 + y1;
+    console.log(z1);
+}
+function calc(fun) {
+    return fun();
+}
+undefined
+calc("hello")
+VM678:2 Uncaught TypeError: fun is not a function
+    at calc (<anonymous>:2:12)
+    at <anonymous>:1:1
+calc @ VM678:2
+(anonymous) @ VM706:1
+calc(add)
+VM602:5 26
+undefined
+function add() {
+    x1 = 12;
+    y1 = 14;
+    z1 = x1 + y1;
+    console.log(z1);
+}
+undefined
+function(){
+    return "hello world";
+}
+VM833:1 Uncaught SyntaxError: Function statements require a function name
+(function(){
+    return "hello world";
+})
+ƒ (){
+    return "hello world";
+}
+(function(){
+    return "hello world";
+})()
+"hello world"
+add
+ƒ add() {
+    x1 = 12;
+    y1 = 14;
+    z1 = x1 + y1;
+    console.log(z1);
+}
+add()
+VM771:5 26
+undefined
+calc
+ƒ calc(fun) {
+    return fun();
+}
+(function(){
+    return "hello world";
+})
+ƒ (){
+    return "hello world";
+}
+(function(){
+    return "hello world";
+})()
+"hello world"
+(function(name){
+    return name;
+})("Ram");
+"Ram"
+Map
+ƒ Map() { [native code] }
+var x = (function(){
+    return "hello world";
+})();
+undefined
+x
+"hello world"
+var x = (function(){
+    return "hello world";
+});
+undefined
+x
+ƒ (){
+    return "hello world";
+}
+x()
+"hello world"

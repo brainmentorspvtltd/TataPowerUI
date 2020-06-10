@@ -1,0 +1,204 @@
+var text = "hello world";
+undefined
+text.length
+11
+text.charAt(3)
+"l"
+text.includes('o')
+true
+text.includes('he')
+true
+text.indexOf('h')
+0
+text.toLowerCase()
+"hello world"
+text.toUpperCase()
+"HELLO WORLD"
+text.slice(2,6)
+"llo "
+text.slice(6)
+"world"
+text.substring(2,6)
+"llo "
+text.substring(6)
+"world"
+text.slice(-6,-2)
+" wor"
+text.slice(-1)
+"d"
+text.slice(-5,-1)
+"worl"
+text.substr(2,6)
+"llo wo"
+text.substring(2,6)
+"llo "
+text.substr(2,6)
+"llo wo"
+text.replace("world", "javascript")
+"hello javascript"
+text
+"hello world"
+var text = "      hello world    "
+undefined
+text.trim()
+"hello world"
+text = text.trim()
+"hello world"
+text.charAt(3)
+"l"
+text.charCodeAt(0)
+104
+text.split()
+["hello world"]
+text.split(" ")
+(2) ["hello", "world"]
+var data = ["ram","shyam","gopal","ramesh","aman"]
+undefined
+data.push('kunal')
+6
+data
+(6) ["ram", "shyam", "gopal", "ramesh", "aman", "kunal"]
+data.pop()
+"kunal"
+data.shift()
+"ram"
+data
+(4) ["shyam", "gopal", "ramesh", "aman"]
+data.unshift("ram")
+5
+data
+(5) ["ram", "shyam", "gopal", "ramesh", "aman"]
+data[0] = "laxman"
+"laxman"
+data
+(5) ["laxman", "shyam", "gopal", "ramesh", "aman"]
+data[data.length] = "ram"
+"ram"
+data
+(6) ["laxman", "shyam", "gopal", "ramesh", "aman", "ram"]
+data.length
+6
+data[5]
+"ram"
+delete data[0]
+true
+data
+(6) [empty, "shyam", "gopal", "ramesh", "aman", "ram"]
+data[0] = "laxman"
+"laxman"
+data
+(6) ["laxman", "shyam", "gopal", "ramesh", "aman", "ram"]
+function emp(...details){
+    console.log(details);
+}
+undefined
+emp(101)
+VM1797:2 [101]
+undefined
+emp(101,102,103,104)
+VM1797:2 (4) [101, 102, 103, 104]
+undefined
+function emp(details){
+    console.log(details);
+}
+undefined
+emp(101)
+VM1877:2 101
+undefined
+emp(101,102)
+VM1877:2 101
+undefined
+function emp(id,name,...address){
+    console.log(details);
+}
+undefined
+function emp(id,name,...address){
+    console.log(id, name, address);
+}
+undefined
+emp(101,'ram','delhi')
+VM2083:2 101 "ram" ["delhi"]
+undefined
+emp(101,'ram','delhi','noida')
+VM2083:2 101 "ram" (2) ["delhi", "noida"]
+undefined
+emp(101,'ram','delhi','noida','pune')
+VM2083:2 101 "ram" (3) ["delhi", "noida", "pune"]
+undefined
+data
+(6) ["laxman", "shyam", "gopal", "ramesh", "aman", "ram"]
+data.splice(0)
+(6) ["laxman", "shyam", "gopal", "ramesh", "aman", "ram"]
+data.splice(0,1)
+[]
+data.splice(2,0)
+[]
+data.splice(2,0,'laxman')
+[]
+data.splice(2,0,'laxman','sita')
+[]
+data
+(3) ["laxman", "laxman", "sita"]
+var data = ["ram","shyam","gopal","ramesh","aman"]
+undefined
+data.splice(0)
+(5) ["ram", "shyam", "gopal", "ramesh", "aman"]0: "ram"1: "shyam"2: "gopal"3: "ramesh"4: "aman"length: 5__proto__: Array(0)
+data
+[]
+data.splice(0,0,"laxman")
+[]
+data
+["laxman"]
+var data = ["ram","shyam","gopal","ramesh","aman"]
+undefined
+data.splice(0,0,"laxman")
+[]
+data
+(6) ["laxman", "ram", "shyam", "gopal", "ramesh", "aman"]
+data.splice(2,0,"sita")
+[]
+data
+(7) ["laxman", "ram", "sita", "shyam", "gopal", "ramesh", "aman"]
+data.splice(2,1,"bharat")
+["sita"]0: "sita"length: 1__proto__: Array(0)
+data
+(7) ["laxman", "ram", "bharat", "shyam", "gopal", "ramesh", "aman"]
+data.splice(2,2,"megha")
+(2) ["bharat", "shyam"]
+data
+(6) ["laxman", "ram", "megha", "gopal", "ramesh", "aman"]
+data.splice(0,1)
+["laxman"]
+data
+(5) ["ram", "megha", "gopal", "ramesh", "aman"]
+data.indexOf("gopal")
+2
+var data_2 = data.slice(0,3);
+undefined
+data
+(5) ["ram", "megha", "gopal", "ramesh", "aman"]
+data_2
+(3) ["ram", "megha", "gopal"]
+data.find('gopal')
+VM2947:1 Uncaught TypeError: gopal is not a function
+    at Array.find (<anonymous>)
+    at <anonymous>:1:6
+(anonymous) @ VM2947:1
+function checkInit(n) {
+    return n.includes('r');
+}
+undefined
+function checkInit(n) {
+    return n.includes('r');
+}
+undefined
+checkInit('ram')
+true
+checkInit('shyam')
+false
+data.find(checkInit)
+"ram"
+data
+(5) ["ram", "megha", "gopal", "ramesh", "aman"]
+data.findIndex(checkInit)
+0

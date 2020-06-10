@@ -1,0 +1,135 @@
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+        console.log("Welcome Ram...");
+    }
+}
+undefined
+obj
+{name: "Ram", age: 40, sal: 45000, bio: ƒ}
+obj.name
+"Ram"
+obj.bio()
+VM242:6 Welcome Ram...
+undefined
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+        return "Welcome Ram...";
+    }
+}
+undefined
+obj.bio()
+"Welcome Ram..."
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+        return "Welcome " + name + " your salary is " + sal;
+    }
+}
+undefined
+obj.bio()
+VM400:6 Uncaught ReferenceError: sal is not defined
+    at Object.bio (<anonymous>:6:57)
+    at <anonymous>:1:5
+bio @ VM400:6
+(anonymous) @ VM428:1
+name
+""
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+        return "Welcome " + obj.name + " your salary is " + obj.sal;
+    }
+}
+undefined
+obj.bio()
+"Welcome Ram your salary is 45000"
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+        return "Welcome " + this.name + " your salary is " + this.sal;
+    }
+}
+undefined
+obj.bio()
+"Welcome Ram your salary is 45000"
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+        function showSal() {
+            return "Welcome " + this.name + " your salary is " + this.sal;
+        }
+        function showAge() {
+            return "Welcome " + this.name + " your age is " + this.age;
+        }
+    }
+}
+undefined
+obj.bio()
+undefined
+obj.bio.showSal()
+VM829:1 Uncaught TypeError: obj.bio.showSal is not a function
+    at <anonymous>:1:9
+(anonymous) @ VM829:1
+obj.bio().showSal()
+VM839:1 Uncaught TypeError: Cannot read property 'showSal' of undefined
+    at <anonymous>:1:10
+(anonymous) @ VM839:1
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+        return function() {
+            return "Welcome " + this.name + " your salary is " + this.sal;
+        }
+    }
+}
+undefined
+obj.bio()
+ƒ () {
+            return "Welcome " + this.name + " your salary is " + this.sal;
+        }
+obj.bio()()
+"Welcome  your salary is undefined"
+var obj = {
+    "name"  : "Ram",
+    "age"  :  40,
+    "sal" : 45000,
+    "bio" : function() {
+            var that = this;
+        return function() {
+            return "Welcome " + that.name + " your salary is " + that.sal;
+        }
+    }
+}
+undefined
+obj.bio()()
+"Welcome Ram your salary is 45000"
+function Product(id, name, price){
+    this.id = id;
+    this.name = name;
+    this.price = price;
+}
+undefined
+var obj = new Product(101,'apple iphone',60000);
+undefined
+var cartList = []
+undefined
+cartList.push(obj)
+1
+cartList
+[Product]

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>AJAX Call</h1>
+
+    <button onclick="loadAjax()">Click to Load Ajax</button>
+
+    <div id="data">
+
+    </div>
+
+    <script>
+        function loadAjax() {
+            one();
+            two();
+            three();
+            four();
+        }
+
+        function one() {
+            console.log("Function One Executed...");
+        }
+        function two() {
+            // setTimeout(function() {
+            //     console.log("Function Two Executed...");
+            // },5000);
+            var xhttp = new XMLHttpRequest();
+            var div = document.querySelector("#data");
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    // console.log(this.readyState, this.status);
+                    console.log(this.responseText);
+                    var data = this.responseText;
+                    var data = JSON.parse(data);
+                    var img = document.createElement("img");
+                    img.src = data.imageURL;
+                    var p = document.createElement("p");
+                    p.innerHTML = data.profile;
+                    div.appendChild(img);
+                    div.append(p);
+                }
+            }
+            xhttp.open('get', 'https://cricapi.com/api/playerStats?apikey=b7CYzlyYOrUCIIdbSlU753oGKN12&pid=35320');
+            xhttp.send();
+        }
+        function three() {
+            console.log("Function Three Executed...");
+        }
+        function four() {
+            console.log("Function Four Executed...");
+        }
+    </script>
+    
+</body>
+</html>

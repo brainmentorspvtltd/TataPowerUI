@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>AJAX Call</h1>
+
+    <button onclick="loadAjax()">Click to Load Ajax</button>
+
+    <div id="data">
+
+    </div>
+
+    <script>
+        function loadAjax() {
+            one();
+            two();
+            three();
+            four();
+        }
+
+        function one() {
+            console.log("Function One Executed...");
+        }
+        function two() {
+            fetch("https://cricapi.com/api/playerStats?apikey=b7CYzlyYOrUCIIdbSlU753oGKN12&pid=35320").
+            then(reposne => reposne.json()).
+            then(data => console.log(data));
+        }
+        function three() {
+            console.log("Function Three Executed...");
+        }
+        function four() {
+            console.log("Function Four Executed...");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+function add(x,y) {
+    return x + y;
+}
+undefined
+var add = function(x,y) {
+    return x + y;
+}
+undefined
+var add = (x,y) => x + y;
+undefined
+add
+(x,y) => x + y
+add(4,5)
+9
+fetch("https://cricapi.com/api/playerStats?apikey=b7CYzlyYOrUCIIdbSlU753oGKN12&pid=35320").
+then(reposne => reposne.json())
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: Object
+fetch("https://cricapi.com/api/playerStats?apikey=b7CYzlyYOrUCIIdbSlU753oGKN12&pid=35320").
+then(reposne => reposne.json()).
+then(data => console.log(data));
+Promise {<pending>}__proto__: Promise[[PromiseStatus]]: "resolved"[[PromiseValue]]: undefined
+VM375:3 {pid: 35320, profile: "↵↵Sachin Tendulkar has been the most complete bats… ones as well) and can pull them out at will.  ↵↵", imageURL: "https://www.cricapi.com/playerpic/35320.jpg", battingStyle: "Right-hand bat", bowlingStyle: "Right-arm offbreak, Legbreak googly", …}battingStyle: "Right-hand bat"born: "April 24, 1973, Bombay (now Mumbai), Maharashtra"bowlingStyle: "Right-arm offbreak, Legbreak googly"country: "India"creditsLeft: 246currentAge: "44 years 186 days"data: {bowling: {…}, batting: {…}}fullName: "Sachin Ramesh Tendulkar"imageURL: "https://www.cricapi.com/playerpic/35320.jpg"majorTeams: "India,Asia XI,Mumbai,Mumbai Indians,Yorkshire"name: "Sachin Tendulkar"pid: 35320playingRole: "Top-order batsman"profile: "↵↵Sachin Tendulkar has been the most complete batsman of his time, the most prolific runmaker of all time, and arguably the biggest cricket icon the game has ever known. His batting was based on the purest principles: perfect balance, economy of movement, precision in stroke-making, and that intangible quality given only to geniuses - anticipation. If he didn't have a signature stroke - the upright, back-foot punch comes close - it's because he was equally proficient at each of the full range of orthodox shots (and plenty of improvised ones as well) and can pull them out at will.  ↵↵"provider: {source: "Various", url: "https://cricapi.com/", pubDate: "2020-06-16T04:37:40.933Z"}ttl: 2v: "2"__proto__: Object
+function counter() {
+    var x = 0;
+    return x += 1;
+}
+undefined
+counter()
+1
+counter()
+1
+counter()
+1
+var x = 0;
+undefined
+function counter() {
+    return x += 1;
+}
+undefined
+counter()
+1
+counter()
+2
+counter()
+3
+function counter() {
+    var x = 0;
+    function adder() {
+        return x += 1;
+    }
+}
+undefined
+counter()
+undefined
+adder()
+VM646:1 Uncaught ReferenceError: adder is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM646:1
+function counter() {
+    var x = 0;
+    function adder() {
+        return x += 1;
+    }
+    return adder
+}
+undefined
+function counter() {
+    var x = 0;
+    function adder() {
+        return x += 1;
+    }
+    return adder()
+}
+undefined
+counter()
+1
+function counter() {
+    var x = 0;
+    function adder() {
+        return x += 1;
+    }
+    return adder
+}
+undefined
+counter()
+ƒ adder() {
+        return x += 1;
+    }
+var count = counter()
+undefined
+count()
+1
+count()
+2
+count()
+3
+count()
+4

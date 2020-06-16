@@ -1,0 +1,77 @@
+var name = "Ram";
+undefined
+function bio() {
+    var name = "Shyam";
+    return "Hello " + name;
+}
+undefined
+bio()
+"Hello Shyam"
+console.log("My name is ",name);
+VM1185:1 My name is  Ram
+undefined
+function bio() {
+    name = "Shyam";
+    return "Hello " + name;
+}
+undefined
+console.log("My name is ",name);
+VM1199:1 My name is  Ram
+undefined
+bio()
+"Hello Shyam"
+console.log("My name is ",name);
+VM1222:1 My name is  Shyam
+undefined
+function bio() {
+    var name = "Ram";
+    var x = 10;
+    if(x == 10) {
+        name = "Shyam";
+    }
+    console.log("Hello",name);
+}
+undefined
+bio()
+VM1402:7 Hello Shyam
+undefined
+function bio() {
+    var name = "Ram";
+    var x = 10;
+    if(x == 10) {
+        let name = "Shyam";
+    }
+    console.log("Hello",name);
+}
+undefined
+bio()
+VM1431:7 Hello Ram
+undefined
+let x = 10;
+undefined
+var y = 20;
+undefined
+window.y
+20
+window.XMLDocument
+ƒ XMLDocument() { [native code] }
+window.x
+undefined
+x
+10
+console.log(x)
+VM1675:1 10
+undefined
+let x1 = 100;
+undefined
+console.log(x1)
+VM1733:1 100
+undefined
+let x1 = 200;
+undefined
+console.log(x1)
+VM1770:1 200
+undefined
+let x1 = 200;
+let x1 = 300;
+VM1806:2 Uncaught SyntaxError: Identifier 'x1' has already been declared

@@ -1,0 +1,75 @@
+var vehicle = {
+    "type" : "Car",
+    "brand" : "Tata",
+    "details" : function() {
+        console.log(this.type, this.brand);
+    }
+}
+undefined
+vehicle
+{type: "Car", brand: "Tata", details: ƒ}
+vehicle.details()
+VM1885:5 Car Tata
+undefined
+var carDetails = vehicle.details();
+VM1885:5 Car Tata
+undefined
+carDetails
+undefined
+var carDetails = vehicle.details.bind(vehicle);
+undefined
+carDetails
+ƒ () {
+        console.log(this.type, this.brand);
+    }
+carDetails()
+VM1885:5 Car Tata
+undefined
+vehicle
+{type: "Car", brand: "Tata", details: ƒ}
+var vehicle_ver2 = function(name) {
+    return "Hello " + name + "This is a " + this.type + " and brand is " + this.brand;
+}
+undefined
+vehicle_ver2('Ram')
+"Hello RamThis is a undefined and brand is undefined"
+var vehicle_ver2 = function(name) {
+    return "Hello " + name + " This is a " + this.type + " and brand is " + this.brand;
+}
+undefined
+var v = vehicle_ver2.bind(vehicle);
+undefined
+v
+ƒ (name) {
+    return "Hello " + name + " This is a " + this.type + " and brand is " + this.brand;
+}
+v('Ram')
+"Hello Ram This is a Car and brand is Tata"
+vehicle.brand = 'Maruti'
+"Maruti"
+v()
+"Hello undefined This is a Car and brand is Maruti"
+v('Ram')
+"Hello Ram This is a Car and brand is Maruti"
+vehicle_ver2.apply(vehicle)
+"Hello undefined This is a Car and brand is Maruti"
+vehicle_ver2.apply(vehicle, ['Ram'])
+"Hello Ram This is a Car and brand is Maruti"
+vehicle_ver2.bind(vehicle)
+ƒ (name) {
+    return "Hello " + name + " This is a " + this.type + " and brand is " + this.brand;
+}
+vehicle_ver2.apply(vehicle, ['Ram'])
+"Hello Ram This is a Car and brand is Maruti"
+vehicle_ver2.call(vehicle, ['Ram'])
+"Hello Ram This is a Car and brand is Maruti"
+vehicle_ver2.apply(vehicle, 'Ram')
+VM2720:1 Uncaught TypeError: CreateListFromArrayLike called on non-object
+    at <anonymous>:1:14
+(anonymous) @ VM2720:1
+vehicle_ver2.call(vehicle, 'Ram')
+"Hello Ram This is a Car and brand is Maruti"
+var bike = {'type' : 'bike', 'brand' : "Yamaha"}
+undefined
+vehicle_ver2.call(bike, ['Ram'])
+"Hello Ram This is a bike and brand is Yamaha"
